@@ -3,6 +3,7 @@ var jade = require('gulp-jade');
 var less = require('gulp-less');
 var coffee = require('gulp-coffee');
 var concat = require ('gulp-concat');
+var uglify = require('gulp-uglify');
 
 gulp.task('default', function() {
   // place code for your default task here
@@ -38,6 +39,7 @@ gulp.task('coffeeToJs', function() {
 gulp.task('concat',function(){
 	return gulp.src('Source/*.js')
 		.pipe(concat('all.js'))	
+		.pipe(uglify())
         .pipe(gulp.dest('Target/'));
 });
 
