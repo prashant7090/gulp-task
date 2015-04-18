@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
 var less = require('gulp-less');
+var coffee = require('gulp-coffee');
 
 gulp.task('default', function() {
   // place code for your default task here
@@ -25,6 +26,13 @@ gulp.task('lessToCss', function() {
 		.pipe(less())
 		.pipe(gulp.dest('Target/'))
 });
+
+gulp.task('coffeeToJs', function() {
+	return gulp.src('Source/*.coffee')
+		.pipe(coffee())
+		.pipe(gulp.dest('Target/'))
+});
+
 
 
 
