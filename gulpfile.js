@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var coffee = require('gulp-coffee');
 var concat = require ('gulp-concat');
 var uglify = require('gulp-uglify');
+var livereload = require('gulp-livereload'); // automatically reload the browser. need LiveReload extension for goole chrome
 
 gulp.task('default', ['watch']);
 
@@ -17,8 +18,9 @@ gulp.task('copy-file',function(){
 //Task to convert jade file to html file.
 gulp.task('jadeToHtml', function() {
 	return gulp.src('Source/*.jade') // put your source file/directory path here 
-		.pipe(jade({ pretty: true })) 
+		.pipe(jade())
 		.pipe(gulp.dest('Target/')) // Put your destination directory here 
+		.pipe(livereload())
 });
 
 gulp.task('lessToCss', function() {
