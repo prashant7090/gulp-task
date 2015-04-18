@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
+var less = require('gulp-less');
 
 gulp.task('default', function() {
   // place code for your default task here
@@ -14,8 +15,14 @@ gulp.task('copy-file',function(){
 
 //Task to convert jade file to html file.
 gulp.task('jadeToHtml', function() {
-	return gulp.src('Source/*.jade')
-		.pipe(jade({ pretty: true }))
+	return gulp.src('Source/*.jade') // put your source file/directory path here 
+		.pipe(jade({ pretty: true })) 
+		.pipe(gulp.dest('Target/')) // Put your destination directory here 
+});
+
+gulp.task('lessToCss', function() {
+	return gulp.src('Source/*.less')
+		.pipe(less())
 		.pipe(gulp.dest('Target/'))
 });
 

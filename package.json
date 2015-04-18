@@ -2,6 +2,7 @@
   "name": "BasicGulpTask",
   "version": "0.0.1",
   "devDependencies": {
-    "gulp-jade": ">=0.10"
+    "gulp-jade": ">=0.10",
+    "gulp-less": ">=1.3.6"
    }
 }
