@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var less = require('gulp-less');
 var coffee = require('gulp-coffee');
+var concat = require ('gulp-concat');
 
 gulp.task('default', function() {
   // place code for your default task here
@@ -33,6 +34,12 @@ gulp.task('coffeeToJs', function() {
 		.pipe(gulp.dest('Target/'))
 });
 
+//Concat Js files into all.js.
+gulp.task('concat',function(){
+	return gulp.src('Source/*.js')
+		.pipe(concat('all.js'))	
+        .pipe(gulp.dest('Target/'));
+});
 
 
 
