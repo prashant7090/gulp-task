@@ -39,7 +39,7 @@ gulp.task('coffeeToJs', function() {
 gulp.task('concat',function(){
 	return gulp.src('Source/*.js')
 		.pipe(concat('all.js'))	
-		.pipe(uglify())
+		.pipe(uglify())          // to minify the file
         .pipe(gulp.dest('Target/'));
 });
 
