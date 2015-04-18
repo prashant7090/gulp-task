@@ -5,9 +5,7 @@ var coffee = require('gulp-coffee');
 var concat = require ('gulp-concat');
 var uglify = require('gulp-uglify');
 
-gulp.task('default', function() {
-  // place code for your default task here
-});
+gulp.task('default', ['watch']);
 
 
 // Task to copy all files from Source folder to Target folder
@@ -43,6 +41,7 @@ gulp.task('concat',function(){
         .pipe(gulp.dest('Target/'));
 });
 
-
-
-
+// this task checks any changes in jade files and runs "jadeToHtml" task
+gulp.task('watch',function(){
+	gulp.watch('Source/*.jade', ['jadeToHtml']);
+});
