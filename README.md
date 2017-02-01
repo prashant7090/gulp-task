@@ -7,6 +7,7 @@ Gulp tasks to manage project structure!
   following purpose:
  * Copy files from one directory to another
  * Convert less files into Css files
+ * Convert scss files into Css files
  * Convert coffee script files into js file
  * Concatenate files
  * Live-reload
