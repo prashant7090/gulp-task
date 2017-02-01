@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
 var less = require('gulp-less');
+var scss = require('gulp-sass');
 var coffee = require('gulp-coffee');
 var concat = require ('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -46,4 +47,11 @@ gulp.task('concat',function(){
 // this task checks any changes in jade files and runs "jadeToHtml" task
 gulp.task('watch',function(){
 	gulp.watch('Source/*.jade', ['jadeToHtml']);
+});
+
+
+gulp.task('scssToCss', function() {
+	return gulp.src('Source/*.scss')
+		.pipe(scss())
+		.pipe(gulp.dest('Target/'))
 });
