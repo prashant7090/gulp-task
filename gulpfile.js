@@ -55,3 +55,7 @@ gulp.task('scssToCss', function() {
 		.pipe(scss())
 		.pipe(gulp.dest('Target/'))
 });
+
+gulp.task('scssToCss:watch', function() {
+	gulp.watch('Source/*.scss',['scssToCss']);
+});
