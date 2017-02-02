@@ -8,6 +8,8 @@ Gulp tasks to manage project structure!
  * Copy files from one directory to another
  * Convert less files into Css files
  * Convert scss files into Css files
+ * Watcher for scss files
+ * Concat scss to one file and then convert into css
  * Convert coffee script files into js file
  * Concatenate files
  * Live-reload

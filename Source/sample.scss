@@ -1,10 +1,18 @@
-.vaibhav{
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-color: purple;
+  li { display: inline-block; }
 
-}
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color : black;	
+  }
 
-.test{
-	
-	color:black;
+
 }

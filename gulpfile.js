@@ -50,12 +50,21 @@ gulp.task('watch',function(){
 });
 
 
-gulp.task('scssToCss', function() {
-	return gulp.src('Source/*.scss')
-		.pipe(scss())
+gulp.task('concatScss',function(){
+
+	return gulp.src('Source/scss/*.scss')
+	.pipe(concat('index.scss'))
+	.pipe(gulp.dest('Target/'));
+
+});
+
+
+gulp.task('scssToCss',['concatScss'], function() {
+	return gulp.src('Target/*.scss')
+		.pipe(scss()).on('error', scss.logError)
 		.pipe(gulp.dest('Target/'))
 });
 
 gulp.task('scssToCss:watch', function() {
-	gulp.watch('Source/*.scss',['scssToCss']);
+	gulp.watch('Source/*.scss',['concatScss']);
 });
