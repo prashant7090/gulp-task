@@ -6,7 +6,10 @@ Gulp tasks to manage project structure!
 2. Build tools are used to manage project structure, Gulp does this job using task. This repository contains tasks for
   following purpose:
  * Copy files from one directory to another
- * Convert css files into less fils
+ * Convert less files into Css files
+ * Convert scss files into Css files
+ * Watcher for scss files
+ * Concat scss to one file and then convert into css
  * Convert coffee script files into js file
  * Concatenate files
  * Live-reload

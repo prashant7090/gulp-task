@@ -1,0 +1,160 @@
+/*=== 13. ABOUT US ===*/
+.aboutUsInfo{
+	img{
+		width: 100%;
+		height: auto;
+		@include mobile-xs{
+			margin-bottom: 20px;
+		}
+		@include mobile{
+			margin-bottom: 20px;
+		}
+		@include tablet{
+			margin-bottom: 0;
+		}
+	}
+	p{
+		font-size: 14px;
+		color: $text-slider-title;
+		line-height: 22px;
+	}
+	.lead{
+		font-size: 15px;
+		font-weight: 400;
+		color: $secondary-color;
+	}
+	.list-unstyled{
+		li{
+			font-size: 14px;
+			color: $text-slider-title;
+			line-height: 30px;
+			padding-left: 18px;
+
+			&:before{
+				content: "";
+			    width: 8px;
+			    height: 8px;
+			    position: relative;
+			    left: -10px;
+			    top: -1px;
+			    background: $primary-color;
+			    @include transform(rotate(45deg));
+			    display: inline-block;
+			}
+		}
+		@include mobile{
+			margin-bottom: 50px;
+		}
+		@include tablet{
+			margin-bottom: 0;
+		}
+	}
+}
+%sectionTitleSmall{
+	color: $white-color;
+	text-transform: capitalize;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+%captionTitle{
+	color: $white-color;
+	text-transform: capitalize;
+	font-size: 15px;
+	margin-bottom: 16px;
+}
+.darkSection{
+	background-image: url("../img/about-us/store-bg.jpg");
+	background-attachment: fixed;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: $white-color;
+	padding: 100px 0;
+	h3{
+		@extend %sectionTitleSmall;
+	}
+	.thumbnail{
+		padding: 20px;
+		background-color: rgba(black, .4);
+		min-height: 180px;
+		margin-bottom: 30px;
+		.caption{
+			padding: 0;
+			h5{
+				@extend %captionTitle;
+			}
+			address{
+				font-size: 12px;
+				color: rgba($white-color, .7);
+				font-weight: 700;
+				line-height: 22px;
+				@include mobile{
+					font-size: 12px;
+				}
+				@include tablet{
+					font-size: 12px;
+				}
+				@include desktops{
+					font-size: 10px;
+				}
+				@include large-desktops{
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	.btn-default{
+		width: 141px;
+		height: 45px;
+		background-color: transparent;
+		@include add-border(2px, rgba($primary-color, .5), all);
+		border-radius: 0;
+		color: $white-color;
+		padding: 0;
+		line-height: 45px;
+		font-size: 14px;
+		font-weight: 700;
+		@include transition(all 0.3s ease-in-out);
+		&:hover{
+			background-color: $primary-color;
+			color: $white-color;
+			border-color: $primary-color;
+		}
+	}
+}
+.aboutPeople{
+	@include mobile{
+		padding-bottom: 90px;
+	}
+	@include mobile{
+		padding-bottom: 60px;
+	}
+	h3{
+		@extend %sectionTitleSmall;
+		color: $secondary-color;
+	}
+	.thumbnail{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.caption{
+			padding-top: 18px;
+			h5{
+				@extend %captionTitle;
+				color: $secondary-color;
+				text-transform: uppercase;
+				margin-bottom: 5px;
+			}
+			p{
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+.test{
+  opacity: 1;
+}
